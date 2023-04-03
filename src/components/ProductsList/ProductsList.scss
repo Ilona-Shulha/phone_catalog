@@ -1,0 +1,12 @@
+@import '../../style_utils/utils';
+
+.ProductsList {
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-right: -16px;
+
+  &__Item {
+    margin-right: 16px;
+  }
+}

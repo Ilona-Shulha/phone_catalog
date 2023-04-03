@@ -1,0 +1,168 @@
+@import '../../style_utils//utils';
+
+.ProductDetailsPage {
+  padding: 24px $section-padding 80px;
+
+  &__BackButton {
+    margin-top: 40px;
+  }
+
+  &__NotFound {
+    margin-top: 40px;
+    font-size: 20px;
+    color: $primary-dark-color
+  }
+
+  &__Title {
+    @extend %section-title;
+    margin-top: 16px;
+  }
+
+  &__ProductInfo {
+    margin-top: 40px;
+    display: grid;
+    grid-template-areas:
+      "productImgs mainInfo"
+      "about aboutTech";
+    row-gap: 80px;
+  }
+
+  &__Imgs {
+    display: flex;
+    height: 442px;
+    width: 560px;
+    grid-area: productImgs;
+  }
+
+  &__References {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__Reference {
+    width: 66px;
+    height: 66px;
+  }
+
+  &__ReferenceImg {
+    width: 100%;
+  }
+
+  &__MainImg {
+    object-position: center;
+  }
+
+  &__MainInfo {
+    // align-self: flex-end;
+    margin-left: 65px;
+    grid-area: mainInfo;
+    align-self: end;
+  }
+
+  &__Price {
+    margin-bottom: 16px;
+  }
+
+  &__CurrentPrice {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    color: $primary-dark-color;
+  }
+
+  &__UnactualPrice {
+    @extend %unactual-price;
+    margin-left: 8px;
+  }
+
+  &__CardButtons {
+    height: 48px;
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__AddButton {
+    @extend %shop-button;
+    padding: 14px;
+    width: 263px;
+    height: 100%;
+
+    &:hover {
+      box-shadow: 0 3px 13px rgba(23, 32, 49, 0.26);
+    }
+
+    &--added {
+      color: #27ae60;
+      background-color: #fff;
+      border: 1px solid $light-gray-color;
+    }
+  }
+
+  &__LikeButton {
+    @extend %shift-button;
+    width: 48px;
+    height: 100%;
+    background: url("../../images/favourites-heart.svg") no-repeat center;
+    margin-left: 8px;
+    // margin-bottom: 32px;
+
+    &--active {
+      background: url("../../images/favourites-heart-like.svg") no-repeat center;
+    }
+  }
+
+  // &__About {
+  //   display: flex;
+  //   // justify-content: space-between;
+  //   margin-top: 80px;
+  //   font-weight: 500;
+  // }
+
+  &__Sibtitle {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    color: $primary-dark-color;
+  }
+
+  &__AboutDescription {
+    width: 560px;
+    grid-area: about;
+  }
+
+  &__AboutInfo {
+    margin-top: 16px;
+  }
+
+  &__AboutTech {
+    margin-left: 64px;
+    grid-area: aboutTech;
+  }
+
+  &__Specs {
+    margin-top: 16px;
+  }
+
+  &__Feature {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &__FeatureValue {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    text-align: right;
+    color: $primary-dark-color;
+  }
+
+  &__SuggestedProducts {
+    margin-top: 80px;
+  }
+}

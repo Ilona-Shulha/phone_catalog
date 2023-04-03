@@ -1,0 +1,31 @@
+@import "../../style_utils/utils";
+
+.ProductsSlider {
+  &__SliderTop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__SectionTitle {
+    @extend %section-title;
+  }
+
+  &__Buttons {
+    padding: 4px 0;
+  }
+
+  &__ButtonNext {
+    @extend %shift-button;
+    background: url(../../images/arrow-next.svg) no-repeat center;
+  }
+
+  &__ButtonPrev {
+    @extend %shift-button;
+    background: url(../../images/arrow-prev.svg) no-repeat center;
+    margin-right: 16px;
+  }
+}
+
+.swiper {
+  margin-top: 24px;
+}

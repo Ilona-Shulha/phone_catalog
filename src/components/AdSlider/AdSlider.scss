@@ -1,0 +1,50 @@
+@import "../../style_utils/utils";
+
+.AdSlider {
+  &__Slider {
+    height: 400px;
+    display: flex;
+  }
+
+  &__SlideImg {
+    width: 100%;
+  }
+
+  &__Button {
+    @extend %shift-button;
+    height: 100%;
+
+    &--Next {
+      background: url(../../images/arrow-next.svg) no-repeat center;
+    }
+
+    &--Prev {
+      background: url(../../images/arrow-prev.svg) no-repeat center;
+    }
+  }
+
+  &__SlidesContainer {
+    overflow: hidden;
+    margin: 0 16px;
+    width: 100%;
+  }
+
+  &__Bullets {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    margin: 0 auto;
+    padding: 18px 0 10px;
+  }
+
+  &__Bullet {
+    height: 4px;
+    width: 14px;
+    background-color: $light-gray-color;
+
+    &:hover, &--active {
+      background-color: $primary-dark-color;
+    }
+
+  }
+}

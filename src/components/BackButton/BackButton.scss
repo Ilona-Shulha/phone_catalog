@@ -1,0 +1,7 @@
+@import '../../style_utils/utils';
+
+.BackButton {
+  padding-left: 20px;
+  background: url(../../images/arrow-prev.svg) no-repeat;
+  color: $secondary-color;
+}

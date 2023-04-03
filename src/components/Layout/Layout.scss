@@ -1,0 +1,122 @@
+@import '../../style_utils/utils';
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100vw;
+  height: $header-height;
+  border-bottom: 1px solid $gray-icon-color;
+
+  &__Logo {
+    margin: 0 64px 0 24px;
+  }
+
+  &__Nav {
+    width: 425px;
+  }
+}
+
+.Nav {
+  &__List {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__Link {
+    padding: 27px 0 24px 0;
+    border-bottom: $heder-border;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 92%;
+    letter-spacing: 0.04em;
+
+    &--Active {
+      color: $primary-dark-color;
+      border-color: $primary-dark-color;
+    }
+
+    &:hover {
+      color: $primary-dark-color;
+      border-color: $primary-dark-color;
+    }
+  }
+}
+
+.ShopingNav {
+  display: flex;
+  margin-left: auto;
+
+  // & > * {
+  //   border-left: 1px solid $gray-icon-color;
+  // }
+
+  &__Link {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-left: 1px solid $gray-icon-color;
+    border-bottom: $heder-border;
+
+    &--active, &:hover {
+      border-bottom: 3px solid $primary-dark-color;
+    }
+
+    &--favorites {
+      background: url(../../images/favourites-heart.svg) no-repeat center;
+    }
+    &--cart {
+      background: url(../../images/shopping-bag.svg) no-repeat center;
+    }
+  }
+
+  &__ProductsQuantity {
+    @extend %quantity-label;
+  }
+
+  &__FavoritesQuantity {
+    @extend %quantity-label;
+  }
+}
+
+.Footer {
+  display: flex;
+  align-items: center;
+  padding: 15px $section-padding;
+  height: $footer-height;
+  border-top: 1px solid $gray-icon-color;
+
+  &__Logo {
+    margin-right: 382px;
+  }
+
+  &__Nav {
+    width: 293px;
+  }
+
+  &__TextBackToTop {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &__ButtonTop {
+    margin-left: auto;
+    position: relative;
+    background: url(../../images/arrow-up.svg) no-repeat center;
+    @extend %shift-button;
+
+    &::before {
+      content: "Back to top";
+      position: absolute;
+      left: -102px;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+
+    &:hover {
+      color: $primary-dark-color;
+      border-color: $primary-dark-color;
+    }
+  }
+}

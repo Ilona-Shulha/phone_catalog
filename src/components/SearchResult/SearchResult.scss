@@ -1,0 +1,13 @@
+@import '../../style_utils/utils';
+
+.SearchResult{
+  &__Counter {
+    margin-bottom: 24px;
+  }
+
+  &__NoResults{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+}

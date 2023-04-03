@@ -1,0 +1,57 @@
+@import '../../style_utils/utils';
+
+.Pagination {
+  display: flex;
+  padding-top: 40px;
+  width: fit-content;
+  margin: 0 auto;
+
+  &__Item {
+    text-align: center;
+    line-height: 32px;
+    color: $primary-dark-color;
+
+    &--num:not(:nth-last-child(-n+2)) {
+      margin-right: 8px;
+    }
+  }
+
+  &__Button {
+    @extend %shift-button;
+
+    &--next {
+      background: url(../../images/arrow-next.svg) no-repeat center;
+      margin-left: 16px;
+
+      &.Pagination__Button--disabled {
+        background-image: url(../../images/arrow-next-pass.svg);
+      }
+    }
+
+    &--prev {
+      background: url(../../images/arrow-prev.svg) no-repeat center;
+      margin-right: 16px;
+
+      &.Pagination__Button--disabled {
+        background-image: url(../../images/arrow-prev-pass.svg);
+      }
+    }
+
+    // &:active {
+    //   color: #fff;
+    //   background-color: $primary-dark-color;
+    // }
+
+    &--active {
+      color: #fff;
+      background-color: $primary-dark-color;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+

@@ -1,0 +1,86 @@
+@import "../../style_utils/_utils.scss";
+
+.ProductCard {
+  width: $card-width;
+  height: 507px;
+  padding: 32px 24px 24px;
+  color: $primary-dark-color;
+  border: 1px solid $light-gray-color;
+
+  &:hover {
+    border-color: $gray-icon-color;
+    cursor: pointer;
+  }
+
+  &__MainInfo {
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+
+    &::after {
+      content: "";
+      @extend %after-line;
+    }
+  }
+
+  &__Img {
+    width: 208px;
+    height: 208px;
+    margin-bottom: 24px;
+  }
+
+  &__Name {
+    font-weight: 500;
+    min-height: 3em;
+  }
+
+  &__CurrentPrice {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+  }
+
+  &__UnactualPrice {
+    @extend %unactual-price;
+    margin-left: 8px;
+  }
+}
+
+.CardButtons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 40px;
+
+  &__AddButton {
+    @extend %shop-button;
+    width: 176px;
+
+    &:hover {
+      box-shadow: 0 3px 13px rgba(23, 32, 49, 0.26);
+    }
+
+    &--added {
+      color: #27ae60;
+      background-color: #fff;
+      border: 1px solid $light-gray-color;
+
+      // &:hover {
+      //   border-color: $secondary-color;
+      //   box-shadow: none;
+      // }
+    }
+  }
+
+  &__LikeButton {
+    @extend %shift-button;
+    width: 40px;
+    height: 40px;
+    // border: 1px solid $gray-icon-color;
+    background: url("../../images/favourites-heart.svg") no-repeat center;
+
+    &--active {
+      background: url("../../images/favourites-heart-like.svg") no-repeat center;
+    }
+  }
+}

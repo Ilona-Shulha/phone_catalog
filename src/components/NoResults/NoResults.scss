@@ -1,0 +1,11 @@
+@import '../../style_utils/utils';
+
+.NoResults {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 24px;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../style_utils/utils";
+
+.ProductsPage {
+  padding: 24px $section-padding 80px;
+
+  // &__BackButton {
+  //   margin-top: 40px;
+  // }
+
+  &__Title {
+    @extend %section-title;
+    margin: 40px 0 8px;
+    // margin-bottom: 8px;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &__ProductCount {
+    margin-bottom: 40px;
+  }
+
+  &__ViewSelects {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  &__Select {
+    display: block;
+    margin-top: 4px;
+    padding: 10px 12px;
+  }
+
+  // &__OnPageSelect {
+  //   display: block;
+  //   margin-top: 4px;
+  // }
+
+  &__OnPageLabel {
+    margin-left: 16px;
+  }
+
+
+}

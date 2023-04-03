@@ -1,0 +1,30 @@
+@import "../../style_utils/utils";
+
+.AdditionalInfo {
+  margin-bottom: 16px;
+
+  &__Feature {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 125%;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__FeatureKey {
+    color: $secondary-color;
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__FeatureValue {
+    text-transform: uppercase;
+    color: $primary-dark-color;
+  }
+}

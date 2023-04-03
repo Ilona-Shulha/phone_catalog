@@ -1,0 +1,15 @@
+@import '../../style_utils/utils';
+
+.Favorites {
+  padding: 24px $section-padding 80px;
+
+  &__Title {
+    @extend %section-title;
+    margin-top: 40px;
+  }
+
+  &__Count {
+    margin: 8px 0 40px;
+    font-weight: 500;
+  }
+}

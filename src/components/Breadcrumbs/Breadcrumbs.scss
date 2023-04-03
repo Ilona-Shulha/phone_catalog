@@ -1,0 +1,37 @@
+@import "../../style_utils/utils";
+
+// .Breadcrumbs__Link--Disabled {
+//   display: none;
+// }
+.Breadcrumbs {
+  display: flex;
+  align-items: center;
+
+  &__Item {
+    padding-left: 24px;
+    background: url(../../images/arrow-next.svg) no-repeat left;
+    margin-left: 8px;
+
+    &--link {
+      color: $primary-dark-color;
+
+      &:hover {
+        text-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+        // color: $primary-dark-color;
+      }
+    }
+
+
+  }
+
+  &__LinkHome {
+    width: 16px;
+    height: 16px;
+    background: url(../../images/home.svg) no-repeat;
+    // background: url(../../images/home-inactive.svg) no-repeat;
+
+    &:hover {
+      background: url(../../images/home-active.svg) no-repeat;
+    }
+  }
+}
