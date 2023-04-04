@@ -22,7 +22,7 @@ export const Layout = () => {
     <>
       <header className="Header" id="Header">
         <Link
-          to="/"
+          to="/phone_catalog/"
           className="Logo Header__Logo"
         >
           <img src="img/logo.svg" alt="our company" />

@@ -1,9 +1,10 @@
-# React Starter Pack
+# Phone_Catalog with react
 
-To use this template click `Use this template`
+Here are:
 
-### Available Scripts
-
-`Deploy` - available to deploy your application to gh-pages
-
-`SCSS Preprocessor` - available to write your styles with modern style language
+- Custom slider
+- Swiper slider
+- Fetch products from API
+- `Loader` is showed it while waiting for the data from server
+- Ability to add/remove favorite products by pressing a hart
+- Ability to save the `Cart` to the `localSotrage` on each change and read it on page load
