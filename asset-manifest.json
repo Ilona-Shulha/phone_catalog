@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.cde17c46.chunk.css",
+    "main.js": "./static/js/main.a9370594.chunk.js",
+    "main.js.map": "./static/js/main.a9370594.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.355d4a7f.js",
+    "runtime-main.js.map": "./static/js/runtime-main.355d4a7f.js.map",
+    "static/css/2.b1b9cf69.chunk.css": "./static/css/2.b1b9cf69.chunk.css",
+    "static/js/2.d364a0d5.chunk.js": "./static/js/2.d364a0d5.chunk.js",
+    "static/js/2.d364a0d5.chunk.js.map": "./static/js/2.d364a0d5.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.b1b9cf69.chunk.css.map": "./static/css/2.b1b9cf69.chunk.css.map",
+    "static/css/main.cde17c46.chunk.css.map": "./static/css/main.cde17c46.chunk.css.map",
+    "static/js/2.d364a0d5.chunk.js.LICENSE.txt": "./static/js/2.d364a0d5.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "./static/media/Mont-SemiBold.5d4afcfe.woff",
+    "static/media/Pagination.scss": "./static/media/arrow-prev-pass.68c5f704.svg",
+    "static/media/BackButton.scss": "./static/media/arrow-prev.e8de1f88.svg",
+    "static/media/Layout.scss": "./static/media/shopping-bag.30eb4108.svg",
+    "static/media/CartPage.scss": "./static/media/plus-active.eb7b6e98.svg",
+    "static/media/ProductDetailsPage.scss": "./static/media/favourites-heart.bd243453.svg",
+    "static/media/Breadcrumbs.scss": "./static/media/home.c77b1491.svg",
+    "static/media/Search.scss": "./static/media/search-icon.99d7dbae.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.355d4a7f.js",
+    "static/css/2.b1b9cf69.chunk.css",
+    "static/js/2.d364a0d5.chunk.js",
+    "static/css/main.cde17c46.chunk.css",
+    "static/js/main.a9370594.chunk.js"
+  ]
+}
