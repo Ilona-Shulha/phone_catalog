@@ -86,7 +86,7 @@ const App = () => {
       }}
       >
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="phone_catalog/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="*" element={<NotFoundPage />} />
             <Route path="cart" element={<CartPage />} />
