@@ -86,7 +86,7 @@ const App = () => {
       }}
       >
         <Routes>
-          <Route path="phone_catalog/" element={<Layout />}>
+          <Route path="/phone_catalog/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="*" element={<NotFoundPage />} />
             <Route path="cart" element={<CartPage />} />
@@ -105,12 +105,9 @@ const App = () => {
                 <ProductsPage productType="phones" />
               }
             />
-
-            {/* </Route> */}
             <Route path="phones/:id" element={<ProductDetailsPage />} />
             <Route path="tablets/:id" element={<ProductDetailsPage />} />
             <Route path="accessories/:id" element={<ProductDetailsPage />} />
-            {/* <Route path=":productType/*" element={<ProductsPage />} /> */}
             <Route path=":productType/:id" element={<ProductDetailsPage />} />
           </Route>
         </Routes>
