@@ -89,26 +89,26 @@ const App = () => {
           <Route path="/phone_catalog/" element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="*" element={<NotFoundPage />} />
-            <Route path="/phone_catalog/cart" element={<CartPage />} />
-            <Route path="/phone_catalog/favorites" element={<Favorites />} />
+            <Route path="cart" element={<CartPage />} />
+            <Route path="favorites" element={<Favorites />} />
             <Route
-              path="/phone_catalog/accessories/*"
+              path="phone_catalog/accessories/*"
               element={<ProductsPage productType="accessories" />}
             />
             <Route
-              path="/phone_catalog/tablets/*"
+              path="phone_catalog/tablets/*"
               element={<ProductsPage productType="tablets" />}
             />
             <Route
-              path="/phone_catalog/phones/*"
+              path="phone_catalog/phones/*"
               element={
                 <ProductsPage productType="phones" />
               }
             />
-            <Route path="/phone_catalog/phones/:id" element={<ProductDetailsPage />} />
-            <Route path="/phone_catalog/tablets/:id" element={<ProductDetailsPage />} />
-            <Route path="/phone_catalog/accessories/:id" element={<ProductDetailsPage />} />
-            <Route path="/phone_catalog/:productType/:id" element={<ProductDetailsPage />} />
+            <Route path="phone_catalog/phones/:id" element={<ProductDetailsPage />} />
+            <Route path="phone_catalog/tablets/:id" element={<ProductDetailsPage />} />
+            <Route path="phone_catalog/accessories/:id" element={<ProductDetailsPage />} />
+            <Route path="phone_catalog/:productType/:id" element={<ProductDetailsPage />} />
           </Route>
         </Routes>
       </LikeContext.Provider>
