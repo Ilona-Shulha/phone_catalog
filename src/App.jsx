@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-filename-extension */
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { CartContext, LikeContext } from './components/Context/Context';
@@ -9,33 +8,11 @@ import { Layout } from './components/Layout/Layout';
 import { HomePage } from './pages/HomePage/HomePage';
 import { ProductsPage } from './pages/ProductsPage/ProductsPage';
 import { CartPage } from './pages/CartPage/CartPage';
-import {
-  ProductDetailsPage,
-} from './pages/ProductDetailsPage/ProductDetailsPage';
+import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
 import { Favorites } from './pages/Favorites/Favorites';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 
 import './App.scss';
-
-// interface Component {
-//   age: number,
-//   type: string,
-//   id: string,
-//   imageUrl: string,
-//   name: string,
-//   snippet: string,
-//   price: number,
-//   discount: number,
-//   screen: string,
-//   capacity: string,
-//   ram: string,
-// }
-
-// interface ChoosedComponent {
-//   id?: string,
-//   quantity?: number,
-//   product: {},
-// }
 
 const useLocalStorage = (key, initialValue) => {
   const valueLocal = localStorage.getItem(key) || '';
@@ -44,10 +21,9 @@ const useLocalStorage = (key, initialValue) => {
     ? initialValue
     : JSON.parse(valueLocal));
 
-  // eslint-disable-next-line @typescript-eslint/no-shadow
-  const saveLocal = (value) => {
-    setValue(value);
-    localStorage.setItem(key, JSON.stringify(value));
+  const saveLocal = (val) => {
+    setValue(val);
+    localStorage.setItem(key, JSON.stringify(val));
   };
 
   return [value, saveLocal];
@@ -60,37 +36,28 @@ const App = () => {
   const updateCartContent = (action, component) => {
     switch (action) {
       case 'delAll':
-        setCartContent(cartContent.filter((el) => {
-          return el.id !== component.id;
-        }));
+        setCartContent(cartContent.filter(el => el.id !== component.id));
         break;
       case 'del':
-        if (cartContent.some((el) => {
-          return el.id === component.id && el.quantity > 1;
-        })) {
-          setCartContent(cartContent.map((el) => {
-            return (el.id === component.id)
-              ? { ...el, quantity: el.quantity - 1 }
-              : el;
-          }));
-        } else if (cartContent.some((el) => {
-          return el.id === component.id;
-        })) {
-          setCartContent(cartContent.filter((el) => {
-            return el.id !== component.id;
-          }));
+        // eslint-disable-next-line max-len
+        if (cartContent.some(el => el.id === component.id && el.quantity > 1)) {
+          setCartContent(cartContent.map(el => ((el.id === component.id)
+            ? {
+              el, quantity: el.quantity - 1,
+            }
+            : el)));
+        } else if (cartContent.some(el => el.id === component.id)) {
+          setCartContent(cartContent.filter(el => el.id !== component.id));
         }
 
         break;
       case 'add':
-        if (cartContent.some((el) => {
-          return el.id === component.id;
-        })) {
-          setCartContent(cartContent.map((el) => {
-            return (el.id === component.id)
-              ? { ...el, quantity: el.quantity + 1 }
-              : el;
-          }));
+        if (cartContent.some(el => el.id === component.id)) {
+          setCartContent(cartContent.map(el => ((el.id === component.id)
+            ? {
+              ...el, quantity: el.quantity + 1,
+            }
+            : el)));
         } else {
           setCartContent([...cartContent, component]);
         }
@@ -102,18 +69,22 @@ const App = () => {
   };
 
   const updateLikeContent = (product) => {
-    if (likeProducts.some((el) => el.id === product.id)) {
-      setLikeProducts(likeProducts.filter((el) => {
-        return el.id !== product.id;
-      }));
+    if (likeProducts.some(el => el.id === product.id)) {
+      setLikeProducts(likeProducts.filter(el => el.id !== product.id));
     } else {
       setLikeProducts([...likeProducts, product]);
     }
   };
 
   return (
-    <CartContext.Provider value={{ cartContent, updateCartContent }}>
-      <LikeContext.Provider value={{ likeProducts, updateLikeContent }}>
+    <CartContext.Provider value={{
+      cartContent, updateCartContent,
+    }}
+    >
+      <LikeContext.Provider value={{
+        likeProducts, updateLikeContent,
+      }}
+      >
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

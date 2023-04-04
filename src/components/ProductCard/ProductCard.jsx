@@ -1,8 +1,6 @@
-/* eslint-disable no-console */
+/* eslint-disable react/prop-types */
 /* eslint-disable max-len */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable react/jsx-filename-extension */
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { CartContext, LikeContext } from '../Context/Context';
@@ -42,7 +40,6 @@ export const ProductCard = ({ product }) => {
       >
         <img
           src={imageUrl}
-          // src={`https://mate-academy.github.io/react_phone-catalog/${imageUrl}`}
           alt={name}
           className="ProductCard__Img"
         />
@@ -69,7 +66,6 @@ export const ProductCard = ({ product }) => {
           })}
           onClick={(e) => {
             e.preventDefault();
-            // e.stopPropagation();
             cart.updateCartContent('add', {
               id,
               quantity: 1,

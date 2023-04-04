@@ -3,7 +3,7 @@
 .Header {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100vw;
   height: $header-height;
   border-bottom: 1px solid $gray-icon-color;
@@ -47,10 +47,6 @@
 .ShopingNav {
   display: flex;
   margin-left: auto;
-
-  // & > * {
-  //   border-left: 1px solid $gray-icon-color;
-  // }
 
   &__Link {
     position: relative;

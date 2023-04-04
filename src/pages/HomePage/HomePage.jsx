@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable no-console */
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AdSlider } from '../../components/AdSlider/AdSlider';
 import {
@@ -19,13 +17,9 @@ export const HomePage = () => {
 
   useEffect(() => {
     getHotPriceProducts()
-      .then(data => {
-        setHotProducts(data);
-      });
+      .then(data => setHotProducts(data));
     getBrandNewProducts()
-      .then(data => {
-        setNewProducts(data);
-      });
+      .then(data => setNewProducts(data));
   }, []);
 
   return (

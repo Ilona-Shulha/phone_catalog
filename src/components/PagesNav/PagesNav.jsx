@@ -1,4 +1,4 @@
-import { PageNavLink } from '../PageNavLink/PageNavLink';
+import React, { PageNavLink } from '../PageNavLink/PageNavLink';
 
 export const PagesNav = () => (
   <nav className="nav Header__Nav">

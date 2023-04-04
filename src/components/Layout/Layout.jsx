@@ -1,9 +1,6 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useContext } from 'react';
+/* eslint-disable max-len */
+import React, { useContext } from 'react';
 import {
   Link, Outlet, NavLink, useLocation,
 } from 'react-router-dom';
@@ -39,10 +36,6 @@ export const Layout = () => {
               )
           }
 
-          {/* <a
-            href=""
-            className="ShopingNav__Link ShopingNav__Link--Favorites"
-          /> */}
           <NavLink
             to="/favorites"
             className={({ isActive }) => classNames('ShopingNav__Link',
@@ -68,9 +61,7 @@ export const Layout = () => {
               className="ShopingNav__ProductsQuantity"
               hidden={cartContent.cartContent.length === 0}
             >
-              {cartContent.cartContent.reduce((prev, current) => {
-                return prev + current.quantity;
-              }, 0)}
+              {cartContent.cartContent.reduce((prev, current) => prev + current.quantity, 0)}
             </div>
           </NavLink>
         </div>
@@ -108,7 +99,6 @@ export const Layout = () => {
         <a
           href="#Header"
           className="Footer__ButtonTop"
-          // onClick={() => handleOnClick(data)}
         >
           {' '}
         </a>

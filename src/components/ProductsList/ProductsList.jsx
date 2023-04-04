@@ -1,5 +1,5 @@
-/* eslint-disable react/jsx-filename-extension */
-import { ProductCard } from '../ProductCard/ProductCard';
+/* eslint-disable react/prop-types */
+import React, { ProductCard } from '../ProductCard/ProductCard';
 
 import './ProductsList.scss';
 
@@ -15,14 +15,6 @@ export const ProductsList = ({ products }) => (
       >
         <ProductCard
           product={el}
-          // imageUrl={el.imageUrl}
-          // name={el.name}
-          // price={el.price}
-          // discount={el.discount}
-          // screen={el.screen}
-          // capacity={el.capacity}
-          // ram={el.ram}
-          // type={el.type}
         />
       </li>
     ))}

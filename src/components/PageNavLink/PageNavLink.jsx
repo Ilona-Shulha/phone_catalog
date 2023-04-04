@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import React, { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 export const PageNavLink = ({ to, text }) => (

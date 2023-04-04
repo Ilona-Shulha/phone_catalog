@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-filename-extension */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { LikeContext } from '../../components/Context/Context';
@@ -19,9 +19,8 @@ export const Favorites = () => {
       {query && like.likeProducts.length > 0
         ? (
           <SearchResult
-            products={like.likeProducts.filter(el => {
-              return el.name.toLowerCase().includes(query.toLowerCase());
-            })}
+            // eslint-disable-next-line max-len
+            products={like.likeProducts.filter(el => el.name.toLowerCase().includes(query.toLowerCase()))}
           />
         )
         : (

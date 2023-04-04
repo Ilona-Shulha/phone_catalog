@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-filename-extension */
-import { Link, useLocation } from 'react-router-dom';
+import React, { Link, useLocation } from 'react-router-dom';
 
 import './Breadcrumbs.scss';
 

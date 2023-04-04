@@ -1,10 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable react/jsx-filename-extension */
-// import {
+import React, { useState } from 'react';
 import classNames from 'classnames';
-import { useState } from 'react';
 import { Slide } from './Slide';
 import './AdSlider.scss';
 
@@ -16,6 +11,7 @@ export const AdSlider = () => {
     let newValue = newActiveSlide;
 
     if (newActiveSlide > slideCount.length) {
+      // eslint-disable-next-line prefer-destructuring
       newValue = slideCount[0];
     }
 
@@ -62,9 +58,10 @@ export const AdSlider = () => {
             <button
               type="button"
               onClick={() => ChangeActiveNum(el)}
-              className={classNames('AdSlider__Bullet', `AdSlider__Bullet--${el}`, { 'AdSlider__Bullet--active': (el === activeNum) })}
-            >
-            </button>
+              className={
+                classNames('AdSlider__Bullet', `AdSlider__Bullet--${el}`,
+                  { 'AdSlider__Bullet--active': (el === activeNum) })}
+            />
           </li>
         ))}
       </ul>

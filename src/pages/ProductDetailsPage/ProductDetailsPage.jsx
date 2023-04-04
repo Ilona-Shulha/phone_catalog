@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-filename-extension */
-import { useEffect, useState, useContext } from 'react';
+/* eslint-disable max-len */
+import React, { useEffect, useState, useContext } from 'react';
 import { useMatch } from 'react-router-dom';
 import classNames from 'classnames';
 import {
@@ -23,11 +22,6 @@ export const ProductDetailsPage = () => {
 
   const cart = useContext(CartContext);
   const like = useContext(LikeContext);
-  // const {
-  //   display: { screenSize, screenResolution }, android: {
-  //     ui,
-  //   }, storage: { ram, flash }, camera: { primary }, connectivity: { cell },
-  // } = productDetails;
   const match = useMatch('/:productType/:id');
 
   useEffect(() => {
@@ -44,15 +38,11 @@ export const ProductDetailsPage = () => {
 
   return (
     <main className="ProductDetailsPage">
-      {/* <> */}
-      {console.log('productDetails', productDetails)}
       <Breadcrumbs />
       <div className="ProductDetailsPage__BackButton">
         <BackButton />
       </div>
       <Loader isLoading={!productDetails} />
-      {/* {!!productDetails
-        && ( */}
       <>
         {(productDetails && typeof productDetails === 'string')
           && (

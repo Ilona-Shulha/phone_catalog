@@ -1,5 +1,5 @@
-/* eslint-disable react/jsx-filename-extension */
-import { useSearchParams } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import React, { useSearchParams } from 'react-router-dom';
 import { ProductsList } from '../ProductsList/ProductsList';
 
 import './SearchResult.scss';

@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-export const Slide = ({ num, isActive }) => {
-  return (
-    <img
-      hidden={!isActive}
-      src={`./img/app-top-slide-${num}.jpg`}
-      alt={`slide${num}`}
-      className={`AdSlider__SlideImg AdSlider__SlideImg--${num}`}
-    />
-  );
-};
+export const Slide = ({ num, isActive }) => (
+  <img
+    hidden={!isActive}
+    src={`./img/app-top-slide-${num}.jpg`}
+    alt={`slide${num}`}
+    className={`AdSlider__SlideImg AdSlider__SlideImg--${num}`}
+  />
+);

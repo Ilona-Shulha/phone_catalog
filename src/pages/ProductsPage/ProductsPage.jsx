@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-filename-extension */
-import { useState, useEffect } from 'react';
+/* eslint-disable max-len */
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect } from 'react';
 import {
   Routes, Route, useSearchParams,
 } from 'react-router-dom';
@@ -31,24 +31,21 @@ export const ProductsPage = ({ productType }) => {
     switch (productType) {
       case 'phones':
         getPhones()
-          .then(data => {
-            console.log('productType', productType);
+          .then((data) => {
             setProducts(data);
             setProductsCount(data.length);
           });
         break;
       case 'tablets':
         getTablets()
-          .then(data => {
-            console.log('productType', productType);
+          .then((data) => {
             setProducts(data);
             setProductsCount(data.length);
           });
         break;
       default:
         getAccessories()
-          .then(data => {
-            console.log('productType', productType);
+          .then((data) => {
             setProducts(data);
             setProductsCount(data.length);
           });
@@ -73,16 +70,13 @@ export const ProductsPage = ({ productType }) => {
 
   return (
     <main className="ProductsPage">
-      {/* {console.log('ProductsPage')} */}
       {query && products
         ? (
           <SearchResult
             products={[...products].sort((a, b) => (
               (typeof a[sort] !== 'number')
                 ? a[sort].localeCompare(b[sort])
-                : a[sort] - b[sort])).filter(el => {
-              return el.name.toLowerCase().includes(query.toLowerCase());
-            })}
+                : a[sort] - b[sort])).filter(el => el.name.toLowerCase().includes(query.toLowerCase()))}
           />
         )
         : (
@@ -153,8 +147,6 @@ export const ProductsPage = ({ productType }) => {
                             : a[sort] - b[sort])).slice(
                           (currentPage - 1) * perPage, currentPage * perPage,
                         )}
-                        // sliderId={currentPage}
-                        // perPage={perPage}
                       />
                     )}
                   />
@@ -169,7 +161,6 @@ export const ProductsPage = ({ productType }) => {
                 )}
               </>
             )}
-            {/* }} */}
           </>
         )}
     </main>

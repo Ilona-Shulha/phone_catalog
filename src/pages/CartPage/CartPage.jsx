@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 /* eslint-disable no-console */
 /* eslint-disable react/jsx-filename-extension */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import { CartContext } from '../../components/Context/Context';
 import { BackButton } from '../../components/BackButton/BackButton';
@@ -10,9 +11,7 @@ import './CartPage.scss';
 export const CartPage = () => {
   const cart = useContext(CartContext);
 
-  const getActualPrice = (component) => {
-    return component.price - component.price * (component.discount / 100);
-  };
+  const getActualPrice = component => component.price - component.price * (component.discount / 100);
 
   return (
     <main className="CartPage">
@@ -82,18 +81,14 @@ export const CartPage = () => {
             <div className="CartPage__ShopInfo">
               <div className="CartPage__Total">
                 <p className="CartPage__TotalPrice">
-                  {`$${cart.cartContent.reduce((acc, current) => {
-                    return acc + getActualPrice(current.product)
-                      * current.quantity;
-                  }, 0)}`}
+                  {`$${cart.cartContent.reduce((acc, current) => acc + getActualPrice(current.product)
+                      * current.quantity, 0)}`}
                 </p>
                 <p
                   className="CartPage__TotalAmount"
                   data-cy="productQauntity"
                 >
-                  {`Total for ${cart.cartContent.reduce((acc, current) => {
-                    return acc + current.quantity;
-                  }, 0)} items`}
+                  {`Total for ${cart.cartContent.reduce((acc, current) => acc + current.quantity, 0)} items`}
                 </p>
               </div>
               <button type="button" className="CartPage__BuyButton">

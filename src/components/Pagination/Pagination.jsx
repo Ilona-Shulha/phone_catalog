@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-filename-extension */
-import { useState, useEffect } from 'react';
+/* eslint-disable max-len */
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import classNames from 'classnames';
 
