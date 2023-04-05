@@ -31,7 +31,7 @@ export const ProductCard = ({ product }) => {
 
   return (
     <Link
-      to={`/${typeProduct}/${id}`}
+      to={`/phone_catalog/${typeProduct}/${id}`}
       className="ProductCard"
       data-cy="cardsContainer"
     >

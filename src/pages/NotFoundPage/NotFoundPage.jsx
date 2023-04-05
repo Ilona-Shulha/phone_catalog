@@ -12,7 +12,7 @@ export const NotFoundPage = ({ product }) => (
         : 'Page not found'}
     </h2>
     <Link
-      to="/"
+      to="/phone_catalog/"
       className="NotFoundPage__ToHomePage"
     >
       Home page

@@ -4,16 +4,13 @@ import { AdSlider } from '../../components/AdSlider/AdSlider';
 import {
   getHotPriceProducts, getBrandNewProducts,
 } from '../../api/processServerData';
-// import { ProductCard } from '../../components/ProductCard/ProductCard';
 import { ProductsSlider } from '../../components/ProductsSlider/ProductsSlider';
 
 import './HomePage.scss';
 
 export const HomePage = () => {
-  // const [allProducts, setAllProducts] = useState([]);
   const [hotProducts, setHotProducts] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
-  // const [shiftActivePart, setShiftActivePart] = useState(0);
 
   useEffect(() => {
     getHotPriceProducts()
@@ -36,7 +33,6 @@ export const HomePage = () => {
       </section>
       <section
         className="HomePage__ShopByCategory ShopByCategory"
-        // data-cy="categoryLinksContainer"
       >
         <h2
           className="ShopByCategory__SectionTitle"
@@ -49,7 +45,7 @@ export const HomePage = () => {
         >
           <Link
             className="ShopByCategory__Category"
-            to="/phones"
+            to="/phone_catalog/phones"
           >
             <img
               src="./img/category-phones.jpg"
@@ -65,7 +61,7 @@ export const HomePage = () => {
           </Link>
           <Link
             className="ShopByCategory__Category"
-            to="/tablets"
+            to="/phone_catalog/tablets"
           >
             <img
               src="./img/category-tablets.jpg"
@@ -81,7 +77,7 @@ export const HomePage = () => {
           </Link>
           <Link
             className="ShopByCategory__Category"
-            to="/accessories"
+            to="/phone_catalog/accessories"
           >
             <img
               src="./img/category-accessories.jpg"

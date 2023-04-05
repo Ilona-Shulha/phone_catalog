@@ -14,7 +14,7 @@ export const Breadcrumbs = () => {
       {console.log(pathname)} */}
       <li>
         <Link
-          to="/"
+          to="/phone_catalog/"
           className="Breadcrumbs__LinkHome"
         >
           {' '}

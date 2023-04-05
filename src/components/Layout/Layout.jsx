@@ -85,12 +85,12 @@ export const Layout = () => {
               </a>
             </li>
             <li className="Nav__Item">
-              <Link to="/" className="Nav__Link">
+              <Link to="/phone_catalog/" className="Nav__Link">
                 contacts
               </Link>
             </li>
             <li className="Nav__Item">
-              <Link to="/" className="Nav__Link">
+              <Link to="/phone_catalog/" className="Nav__Link">
                 rights
               </Link>
             </li>

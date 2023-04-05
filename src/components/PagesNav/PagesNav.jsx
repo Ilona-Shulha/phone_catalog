@@ -7,13 +7,13 @@ export const PagesNav = () => (
         <PageNavLink to="/" text="home" />
       </li>
       <li className="Nav__Item">
-        <PageNavLink to="/phones" text="phones" />
+        <PageNavLink to="/phone_catalog/phones" text="phones" />
       </li>
       <li className="Nav__Item">
-        <PageNavLink to="/tablets" text="tablets" />
+        <PageNavLink to="/phone_catalog/tablets" text="tablets" />
       </li>
       <li className="Nav__Item">
-        <PageNavLink to="/accessories" text="accessories" />
+        <PageNavLink to="/phone_catalog/accessories" text="accessories" />
       </li>
     </ul>
   </nav>
