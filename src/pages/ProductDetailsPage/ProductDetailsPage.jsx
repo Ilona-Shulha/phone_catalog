@@ -108,7 +108,6 @@ export const ProductDetailsPage = () => {
                       cart.cartContent.some(el => el.id === aboutProduct.id),
                     })}
                     onClick={() => {
-                      // console.log(value.updateCartContent);
                       cart.updateCartContent('add', {
                         id: aboutProduct.id,
                         quantity: 1,
@@ -141,7 +140,6 @@ export const ProductDetailsPage = () => {
                   capacity={aboutProduct.capacity}
                 />
               </div>
-              {/* <section className="ProductDetailsPage__About"> */}
               <div
                 className="ProductDetailsPage__AboutDescription"
                 data-cy="productDescription"
@@ -231,20 +229,9 @@ export const ProductDetailsPage = () => {
                       Camera
                     </p>
                     <p className="ProductDetailsPage__FeatureValue">
-                      {/* {`${ram.slice(0, -2)} ${ram.slice(-2)}`} */}
                       {productDetails.camera.primary}
                     </p>
                   </div>
-                  {/* <div className="ProductDetailsPage__Feature">
-                    <p
-                      className="ProductDetailsPage__FeatureKey"
-                    >
-                      Cell
-                    </p>
-                    <p className="ProductDetailsPage__FeatureValue">
-                      {productDetails.connectivity.cell}
-                    </p>
-                  </div> */}
                 </div>
               </div>
             </section>
@@ -256,9 +243,7 @@ export const ProductDetailsPage = () => {
             </section>
           </>
         )}
-        {/* // </main> */}
       </>
-      {/* )} */}
     </main>
   );
 };
