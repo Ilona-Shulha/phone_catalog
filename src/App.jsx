@@ -92,23 +92,23 @@ const App = () => {
             <Route path="cart" element={<CartPage />} />
             <Route path="favorites" element={<Favorites />} />
             <Route
-              path="phone_catalog/accessories/*"
+              path="accessories/*"
               element={<ProductsPage productType="accessories" />}
             />
             <Route
-              path="phone_catalog/tablets/*"
+              path="tablets/*"
               element={<ProductsPage productType="tablets" />}
             />
             <Route
-              path="phone_catalog/phones/*"
+              path="phones/*"
               element={
                 <ProductsPage productType="phones" />
               }
             />
-            <Route path="phone_catalog/phones/:id" element={<ProductDetailsPage />} />
-            <Route path="phone_catalog/tablets/:id" element={<ProductDetailsPage />} />
-            <Route path="phone_catalog/accessories/:id" element={<ProductDetailsPage />} />
-            <Route path="phone_catalog/:productType/:id" element={<ProductDetailsPage />} />
+            <Route path="phones/:id" element={<ProductDetailsPage />} />
+            <Route path="tablets/:id" element={<ProductDetailsPage />} />
+            <Route path="accessories/:id" element={<ProductDetailsPage />} />
+            <Route path=":productType/:id" element={<ProductDetailsPage />} />
           </Route>
         </Routes>
       </LikeContext.Provider>

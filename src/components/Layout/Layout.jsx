@@ -37,7 +37,7 @@ export const Layout = () => {
           }
 
           <NavLink
-            to="/favorites"
+            to="/phone_catalog/favorites"
             className={({ isActive }) => classNames('ShopingNav__Link',
               'ShopingNav__Link--favorites', {
                 'ShopingNav__Link--active': isActive,
@@ -51,7 +51,7 @@ export const Layout = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/cart"
+            to="/phone_catalog/cart"
             className={({ isActive }) => classNames('ShopingNav__Link',
               'ShopingNav__Link--cart', {
                 'ShopingNav__Link--active': isActive,
