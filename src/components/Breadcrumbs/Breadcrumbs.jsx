@@ -10,8 +10,6 @@ export const Breadcrumbs = () => {
 
   return (
     <ul className="Breadcrumbs" data-cy="breadCrumbs">
-      {/* {console.log(pathParts)}
-      {console.log(pathname)} */}
       <li>
         <Link
           to="/phone_catalog/"
@@ -26,7 +24,7 @@ export const Breadcrumbs = () => {
             ? (<p className="Breadcrumbs__Item">{el}</p>)
             : (
               <Link
-                to={pathParts.slice(0, ind + 2).join('/')}
+                to={`${pathParts.slice(0, ind + 2).join('/')}/`}
                 className="Breadcrumbs__Item Breadcrumbs__Item--link"
               >
                 {el}

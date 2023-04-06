@@ -4,7 +4,7 @@ export const PagesNav = () => (
   <nav className="nav Header__Nav">
     <ul className="Nav__List">
       <li className="Nav__Item">
-        <PageNavLink to="/" text="home" />
+        <PageNavLink to="/phone_catalog/" text="home" />
       </li>
       <li className="Nav__Item">
         <PageNavLink to="/phone_catalog/phones" text="phones" />
