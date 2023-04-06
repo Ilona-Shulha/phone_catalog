@@ -22,7 +22,7 @@ export const ProductDetailsPage = () => {
 
   const cart = useContext(CartContext);
   const like = useContext(LikeContext);
-  const match = useMatch('/:productType/:id');
+  const match = useMatch('/phone_catalog/:productType/:id');
 
   useEffect(() => {
     getProduct(match.params.id)
