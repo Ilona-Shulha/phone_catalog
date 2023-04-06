@@ -69,7 +69,7 @@ export const ProductDetailsPage = () => {
                     >
                       <img
                         className="ProductDetailsPage__ReferenceImg"
-                        src={`/${el}`}
+                        src={`/phone_catalog/${el}`}
                         alt="Product reference"
                       />
                     </button>
