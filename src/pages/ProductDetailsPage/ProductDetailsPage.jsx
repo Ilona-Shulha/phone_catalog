@@ -80,7 +80,7 @@ export const ProductDetailsPage = () => {
                     <img
                       key={el}
                       className="ProductDetailsPage__MainImg"
-                      src={`/${el}`}
+                      src={`/phone_catalog/${el}`}
                       alt="Product reference"
                       hidden={ind !== activeImg}
                     />
