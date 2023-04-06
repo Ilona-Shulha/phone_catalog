@@ -105,7 +105,7 @@ const App = () => {
                 <ProductsPage productType="phones" />
               }
             />
-            <Route path="/phone_catalog/phones/:id" element={<ProductDetailsPage />} />
+            <Route path="phones/:id" element={<ProductDetailsPage />} />
             <Route path="tablets/:id" element={<ProductDetailsPage />} />
             <Route path="accessories/:id" element={<ProductDetailsPage />} />
             <Route path=":productType/:id" element={<ProductDetailsPage />} />

@@ -39,7 +39,7 @@ export const ProductCard = ({ product }) => {
         className="ProductCard__MainInfo"
       >
         <img
-          src={imageUrl}
+          src={`/phone_catalog/${imageUrl}`}
           alt={name}
           className="ProductCard__Img"
         />
