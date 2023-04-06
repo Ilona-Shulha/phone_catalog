@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-filename-extension */
 import React, { useContext } from 'react';
 import classNames from 'classnames';
+
 import { CartContext } from '../../components/Context/Context';
 import { BackButton } from '../../components/BackButton/BackButton';
 
@@ -41,7 +40,7 @@ export const CartPage = () => {
                     {' '}
                   </button>
                   <img
-                    src={`/${el.product.imageUrl}`}
+                    src={`/phone_catalog/${el.product.imageUrl}`}
                     alt=""
                     className="CartPage__ProductImg"
                   />
@@ -72,7 +71,6 @@ export const CartPage = () => {
                     </button>
                   </div>
                   <p className="CartPage__Price">
-                    {/* {`$${el.product.price - el.product.price * (el.product.discount / 100)}`} */}
                     {`$${getActualPrice(el.product)}`}
                   </p>
                 </div>
