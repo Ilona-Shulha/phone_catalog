@@ -92,7 +92,7 @@ const App = () => {
             <Route path="cart" element={<CartPage />} />
             <Route path="favorites" element={<Favorites />} />
             <Route
-              path="accessories/*"
+              path="accessories/"
               element={<ProductsPage productType="accessories" />}
             />
             <Route

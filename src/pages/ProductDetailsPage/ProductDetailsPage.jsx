@@ -9,10 +9,11 @@ import { Breadcrumbs } from '../../components/Breadcrumbs/Breadcrumbs';
 import { ProductsSlider } from '../../components/ProductsSlider/ProductsSlider';
 import { BackButton } from '../../components/BackButton/BackButton';
 
-import './ProductDetailsPage.scss';
 import { CartContext, LikeContext } from '../../components/Context/Context';
 import { AdditionalInfo } from '../../components/AdditionalInfo/AdditionalInfo';
 import { Loader } from '../../components/Loader/Loader';
+
+import './ProductDetailsPage.scss';
 
 export const ProductDetailsPage = () => {
   const [productDetails, setProductDetails] = useState();
